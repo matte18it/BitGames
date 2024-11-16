@@ -1,0 +1,18 @@
+/* Colore personalizzato per il pulsante verde */
+.btn-custom-green {
+    background-color: #85996e;
+    border-color: #85996e;
+    color: white;
+}
+
+.btn-custom-green:hover {
+    background-color: #6b7a5c;
+    border-color: #6b7a5c;
+    color: white;
+}
+
+.custom-form {
+    max-width: 95%;
+    margin-left: 45px;
+    margin-top: 20px;
+}

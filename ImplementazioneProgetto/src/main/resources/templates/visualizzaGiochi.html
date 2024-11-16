@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- JQuery -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/viewGame.css">
+
+    <meta charset="UTF-8">
+    <title>Giochi - BitGames</title>
+</head>
+    <body>
+
+        <nav class="navbar" tag="navHeader" style="background-color: #85996e;">
+            <div style="margin-left: 30px;">
+                <img src="img/ProgettoLogo.png" alt="BitGames" width="216" height="75">
+            </div>
+            <div style="margin-right: 30px; padding: 3px;" class="divAccount">
+                <a class="nav-link" href="#" style="font-weight: bold; height: 100%; display: flex; align-items: center; color: white;">
+                    <i class="material-icons" style="font-size: 20px; margin-right: 5px;">person</i>
+                    Account
+                </a>
+            </div>
+        </nav>
+
+
+        <div style="display: flex; width: 100%; height: 100%;">
+            <div class="divMenu">
+
+                <!-- Home Page -->
+                <div style="width: 100%; margin-top: 20px;">
+                    <a href="homePage" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">home</i>
+                        Home
+                    </a>
+                </div>
+
+                <!-- Pubblicazione Gioco -->
+                <div style="width: 100%; margin-top: 10px;">
+                    <a href="pubblicazioneGioco" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">shop</i>
+                        Pubblica Gioco
+                    </a>
+                </div>
+
+                <!-- Visualizza Giochi -->
+                <div style="width: 100%; margin-top: 10px;">
+                    <a href="#" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">list</i>
+                        Visualizza Giochi
+                    </a>
+                </div>
+
+                <!-- Statistiche -->
+                <div style="width: 100%; margin-top: 10px;">
+                    <a href="statistiche" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">analytics</i>
+                        Statistiche
+                    </a>
+                </div>
+
+                <!-- Supporto Tecnico -->
+                <div style="width: 100%; margin-top: 10px;">
+                    <a href="#" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">group</i>
+                        Supporto Tecnico
+                    </a>
+                </div>
+
+                <!-- About -->
+                <div style="width: 100%; margin-top: 10px;">
+                    <a href="#" class="menuLaterale">
+                        <i class="material-icons" style="font-size: 20px; margin-left: 30px; margin-right: 10px;">info</i>
+                        About
+                    </a>
+                </div>
+
+                <!-- Versione -->
+                <div style="position: absolute; bottom: 10px; left: 30px; color: white;">
+                    Versione 1.0.0
+                </div>
+            </div>
+
+            <div class="divPrincipale">
+                <div class="headerAreaPersonale">
+                    <i class="material-icons" style="margin-left: 30px; font-size: 30px; margin-top: 15px;">list</i>
+                    <h3 style="margin-top: 20px; margin-left: 10px;">
+                        >  Visualizza Giochi
+                    </h3>
+                </div>
+
+                <!-- Uso dell'iterator, un pò forzato ma unico modo funzionante :( -->
+                <th:block th:if="${size != 0}">
+                    <div class="game-container" th:each="i : ${#numbers.sequence(1, size)}">
+
+                        <!-- Stampo le informazioni sul gioco corrente -->
+                        <div class="game-info">
+                            <!-- Immagine del gioco -->
+                            <div class="game-image">
+                                <img th:src="'Games/Icons/' + ${gameIterator.getCurrent().getIcona()}" alt="Game Icon">
+                                <p class="game-version" th:text="${gameIterator.getCurrent().getGenere()}"></p>
+                            </div>
+
+                            <!-- Nome del gioco -->
+                            <div class="game-details">
+                                <div class="game-name" th:text="${gameIterator.getCurrent().getNome()} + ' - ' + ${gameIterator.getCurrent().getVersione()}"></div>
+
+                                <!-- Descrizione del gioco -->
+                                <div class="game-description" th:text="${gameIterator.getCurrent().getDescrizione()}"></div>
+                            </div>
+                        </div>
+
+                        <!-- Controllo se sono presenti altri giochi e porto avanti l'iteratore -->
+                        <div th:if="${gameIterator.hasNext()}">
+                            <th:block th:width="${gameIterator.next()}"></th:block>
+                        </div>
+
+                    </div>
+                </th:block>
+
+                <div style="height: 100px;"></div>
+
+            </div>
+        </div>
+    </body>
+</html>

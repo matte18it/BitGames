@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrazione - BitGames</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="SHA256-d2cgfHNCE/UCzmd3lo/e8+Xj4ZaM6hrQpxRbKH/6RD4=" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/registrazione.css">
+</head>
+  <body>
+    <!-- Immagine BitGames -->
+    <img src="img/registrazione.png" alt="BitGames" id="bitGamesLogo">
+
+    <div class="registration-container">
+      <div class="btn-container">
+        <div class="btn">
+          <button class="giocatore" style="margin-left: 20px;">Giocatore</button>
+          <button class="programmatore" style="margin-left: 50px;">Programmatore</button>
+          <div class="slider"></div>
+        </div>
+      </div>
+
+      <div class="form-section">
+
+        <!-- Form per Giocatore -->
+        <div class="giocatore-box">
+          <form class="text-center form-container">
+            <div class="mb-3">
+              <label for="usernameG" class="form-label">Username</label>
+              <input type="text" class="form-control" id="usernameG" placeholder="Inserisci il tuo username" required>
+            </div>
+            <div class="mb-3">
+              <label for="emailG" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailG" placeholder="Inserisci la tua email" required>
+            </div>
+            <div class="mb-3">
+              <label for="passwordG" class="form-label">Password</label>
+              <input type="password" class="form-control" id="passwordG" placeholder="Inserisci la tua password" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #85996e; border-color: #85996e;">Registrati</button>
+          </form>
+        </div>
+
+        <!-- Form per Programmatore -->
+        <div class="programmatore-box hidden">
+          <form class="text-center form-container">
+            <div class="mb-3">
+              <label for="usernameP" class="form-label">Username</label>
+              <input type="text" class="form-control" id="usernameP" placeholder="Inserisci il tuo username" required>
+            </div>
+            <div class="mb-3">
+              <label for="emailP" class="form-label">Email</label>
+              <input type="email" class="form-control" id="emailP" placeholder="Inserisci la tua email" required>
+            </div>
+            <div class="mb-3">
+              <label for="passwordP" class="form-label">Password</label>
+              <input type="password" class="form-control" id="passwordP" placeholder="Inserisci la tua password" required>
+            </div>
+            <div class="mb-3">
+              <label for="nomeP" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="nomeP" placeholder="Inserisci il tuo nome" required>
+            </div>
+            <div class="mb-3">
+              <label for="cognomeP" class="form-label">Cognome</label>
+              <input type="text" class="form-control" id="cognomeP" placeholder="Inserisci il tuo cognome" required>
+            </div>
+            <div class="mb-3">
+              <label for="dataNascitaP" class="form-label">Data Nascita</label>
+              <input type="date" class="form-control" id="dataNascitaP" style="width: 243px;" required>
+            </div>
+            <div class="mb-3">
+              <label for="cittaP" class="form-label">Città</label>
+              <input type="text" class="form-control" id="cittaP" placeholder="Inserisci la tua città" style="width: 100%;" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #85996e; border-color: #85996e;">Registrati</button>
+          </form>
+        </div>
+
+        <p style="color: white;">Già registrato? <a href="login" style="color: #85996e; text-decoration: none;">Accedi</a></p>
+
+      </div>
+    </div>
+
+    <script src="js/registrazione.js"></script>
+
+  </body>
+</html>

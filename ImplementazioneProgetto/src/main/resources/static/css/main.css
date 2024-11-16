@@ -1,0 +1,72 @@
+/* CSS DI SFONDO */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #85996e;
+    overflow: hidden;
+}
+
+/* CSS BARRA LOGO */
+.divAccount:hover {
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+/* CSS PARTE PRINCIPALE */
+.divPrincipale {
+    background-color: #222222;
+    color: white;
+    border-top-left-radius: 10px;
+    width: 85%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* MENU LATERALE */
+.divMenu {
+    background-color: #85996e;
+    width: 15%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menuLaterale {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    margin-top: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menuLaterale:hover {
+    opacity: 0.8;
+    transition: background-color 0.3s;
+}
+
+
+/* AREA PERSONALE */
+.headerAreaPersonale {
+    background-color: #222222;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.quadrati-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

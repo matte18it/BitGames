@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - BitGames</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="SHA256-d2cgfHNCE/UCzmd3lo/e8+Xj4ZaM6hrQpxRbKH/6RD4=" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+    <body>
+        <!-- Immagine BitGames -->
+        <img src="img/registrazione.png" alt="BitGames" id="bitGamesLogo">
+
+        <div class="login-container">
+            <div class="login-box">
+                <form class="text-center form-container">
+                    <div class="mb-3">
+                        <label for="usernameLogin" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="usernameLogin" placeholder="Inserisci il tuo username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordLogin" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordLogin" placeholder="Inserisci la tua password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="background-color: #85996e; border-color: #85996e;">Accedi</button>
+                </form>
+            </div>
+
+            <p style="color: white;">Non hai un account? <a href="index" style="color: #85996e; text-decoration: none;">Registrati</a></p>
+
+        </div>
+
+        <!-- Script per il login -->
+        <script src="js/login.js"></script>
+
+    </body>
+</html>
