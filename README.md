@@ -1,4 +1,6 @@
 # 👾 BitGames 👾
+La documentazione è disponibile qua: [Documentazione BitGames](https://github.com/matte18it/BitGames/blob/main/Canino-Matteo-234496-BitGames.pdf)
+
 BitGames è una piattaforma web per giocare a videogiochi direttamente da Internet. Tutti
 possono giocare senza scaricare alcuna app.
 
